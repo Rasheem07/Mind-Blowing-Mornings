@@ -1,113 +1,400 @@
+import TestimonialCard from "@/components/testimonialCard";
+import { Facebook, GroupIcon, Instagram, Smile, Star, Tv, Twitter, User2 } from "lucide-react";
+import { Raleway } from "next/font/google";
 import Image from "next/image";
 
+const raleway = Raleway({ subsets: ["latin"], weight: "600" });
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+    <main className="scroll-snap">
+      <section
+        className="min-h-screen max-h-screen bg-fixed bg-cover bg-parallax relative shadow-inner flex flex-col items-center overlay background"
+        style={{
+          backgroundImage: "url('/assets/Background.png')",
+        }}
+      >
+        <div className="fixed inset-y-0 inset-x-0 overlay z-[-1]"></div>
+        <center className="header text-2xl flex flex-col items-center max-w-[60%] mt-32 text-[#FFFFFF]">
+          Transform your mind and body with our 21-day wellness program. Join
+          our community and unlock your limitless potential today
+        </center>
+        <button className="bg-[#F47D31] py-2.5 px-5 rounded-lg shadow-md uppercase z-10 mt-8 text-white hover:bg-orange-400/90 transition-colors cursor-pointer">
+          Get Started
+        </button>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/assets/Foreground.png"
+          alt=""
+          height={376}
+          width={340}
+          className="object-contain absolute bottom-0 left-1/2 foreground"
         />
-      </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="flex flex-col min-h-screen bg-white m-0 items-center w-full max-w-screen-xl mx-auto relative p-5">
+        <div>
+          <div className="flex items-center justify-between gap-5">
+            <div>
+              <h2 className="text-3xl font-bold text-[#F47D31]">
+                The Secret to mind blowing Mornings!
+              </h2>
+              <p className="text-lg font-medium text-[#615F5F]">
+                Start the day with engaging your body physically, mentally and
+                spiritually.
+              </p>
+            </div>
+            <Image
+              src="/assets/Ellipse 72.png"
+              alt=""
+              height={200}
+              width={200}
+            />
+          </div>
+          <div className="flex items-center gap-6">
+            <Image
+              src="/assets/Ellipse 71.png"
+              alt=""
+              height={200}
+              width={200}
+            />
+            <div>
+              <h2 className="text-3xl font-bold text-[#F47D31]">
+                Warm-up your body within an hour!
+              </h2>
+              <ul className="text-lg font-medium text-[#615F5F]">
+                <li>Dynamic warm ups</li>
+                <li>Spirited Yoga asanas</li>
+                <li>Effective physical exercises</li>
+                <li>Whole body engaging movements</li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-5">
+            <div>
+              <h2 className="text-3xl font-bold text-[#F47D31]">
+                The Secret to mind blowing Mornings!
+              </h2>
+              <p className="text-lg font-medium text-[#615F5F]">
+                Start the day with engaging your body physically, mentally and
+                spiritually.
+              </p>
+            </div>
+            <Image
+              src="/assets/Ellipse 72.png"
+              alt=""
+              height={200}
+              width={200}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col absolute top-0 -right-10 items-end gap-2">
+          <div className="py-2 px-[22px] bg-[#F47D31] text-white flex flex-col items-center font-semibold text-sm">
+            <p className="rotate-90 tracking-tighter">C</p>
+            <p className="rotate-90 tracking-tighter">o</p>
+            <p className="rotate-90 tracking-tighter">n</p>
+            <p className="rotate-90 tracking-tighter">t</p>
+            <p className="rotate-90 tracking-tighter">a</p>
+            <p className="rotate-90 tracking-tighter">c</p>
+            <p className="rotate-90 tracking-tighter">t</p>
+          </div>
+          <Image src="/assets/Frame 158.png" alt="" height={58} width={57} />
+        </div>
+        <Image
+          src="/assets/Frame 162.svg"
+          alt=""
+          height={100}
+          width={150}
+          className="absolute -bottom-2.5 left-1/2 -translate-x-1/2"
+        />
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="min-h-screen bg-[#F47D31] flex justify-between px-10 py-7 transalte-3d">
+        <div className="max-w-[35%] min-w-[35%] flex flex-col items-center justify-center">
+          <Image
+            src="/assets/Ellipse 40.png"
+            alt=""
+            height={414}
+            width={439}
+            objectFit="contain"
+            className=" object-contain opacity-95"
+          />
+        </div>
+        <div className="flex flex-col gap-8 max-w-[60%]">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold tracking-wide text-white">
+              WHAT IS MINDBLOWING MORNINGS?
+            </h2>
+            <p className="text-[18px] leading-[26px] text-[#f2f2f2] font-sans">
+              We are a wellness program dedicated to helping individuals
+              discover their inner potential and live a healthy lifestyle. Our
+              program is led by a team of knowledgeable and passionate
+              instructors. We aim to provide physical, mental and emotional
+              benefits through daily yoga, meditation and breathing practices.
+            </p>
+            <div>
+              <h2 className="text-2xl font-bold tracking-wide text-white">
+                THE 21/90 RULE
+              </h2>
+              <p className="text-[18px] leading-[26px] text-[#f2f2f2] font-sans">
+                The formula to win is simple yet consistency plays the keys
+                role, we are here with a formula that never fails if we continue
+                to thrive and put our efforts with passion. We are here to move
+                you with goal driven attitude but with natural flow not making
+                it a military training but a training that sustains and
+                motivates you to keep working within time. Guided by
+                professionals and motivating you with necessary understanding of
+                habit nurturing.
+              </p>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold tracking-wide text-white">
+              OUR MISSION
+            </h2>
+            <p className="text-[18px] leading-[26px] text-[#f2f2f2] font-sans">
+              In today&apos;s fast-paced world, the rat race is not normal. We
+              don&apos;t even identify ourselves with the damage we do to
+              ourselves.
+            </p>
+            <p className="text-[18px] leading-[26px] text-[#f2f2f2] font-sans">
+              To address this cause and the importance of waking up early is our
+              major agenda. In a way, it does feel like an accomplishment
+              whenever you&apos;re able to get up early. You can get started on
+              what you need to do, and hopefully be done early to enjoy the rest
+              of your day.
+            </p>
+            <p className="text-[18px] leading-[26px] text-[#f2f2f2] font-sans">
+              In that sense, waking up early is not only a win psychologically
+              but also a win physically.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <section className="min-h-screen px-8 py-2 transalte-3d">
+        <div className="flex items-center justify-between py-1 subpixel-antialiased divide-x-2 divide-[#F47D31] space-y-2">
+          <div className="flex flex-1 flex-col items-center gap-1 justify-center">
+            <User2 className="text-[#F47D31]" />
+            <h4 className="text-lg font-semibold text-gray-900">
+              Qualified Instructors
+            </h4>
+            <strong>1+</strong>
+          </div>
+          <div className="flex flex-1 flex-col items-center gap-1 justify-center">
+            <GroupIcon className="text-[#F47D31]" />
+            <h4 className="text-lg font-semibold text-gray-900">
+              Qualified Instructors
+            </h4>
+            <strong>1+</strong>
+          </div>
+          <div className="flex flex-1 flex-col items-center gap-1 justify-center">
+            <Tv className="text-[#F47D31]" />
+            <h4 className="text-lg font-semibold text-gray-900">
+              Qualified Instructors
+            </h4>
+            <strong>1+</strong>
+          </div>
+          <div className="flex flex-1 flex-col items-center gap-1 justify-center">
+            <Smile className="text-[#F47D31]" />
+            <h4 className="text-lg font-semibold text-gray-900">
+              Qualified Instructors
+            </h4>
+            <strong>1+</strong>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+        <div className="flex flex-col items-center gap-5 mt-8 max-w-screen-md mx-auto">
+          <div className="flex flex-col items-center gap-1.5">
+            <h2 className="text-[#F47D31] text-2xl font-bold">
+              Our instructors
+            </h2>
+            <p className="text-[#52525B] text-[16px] leading-6">
+              Experienced professionals in the field who can change your life!
+            </p>
+          </div>
+          <div className="flex items-center gap-5">
+            <Image
+              src="/assets/Ellipse 22.png"
+              alt=""
+              height={212}
+              width={212}
+              className="object-contain"
+            />
+            <p className=" text-[#5C5C5C] text-[16px] leading-6 font-sans">
+              Mandar is a highly knowledgeable and certified Yoga Instructor,
+              deeply devoted to yoga and the art of teaching. His expertise
+              extends beyond yoga itself, encompassing various habits that
+              contribute to creating an optimal morning routine. Mandar takes
+              immense pleasure in instilling positivity and enriching the lives
+              of others through his teachings.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col mt-8 gap-5 px-8">
+          <div className="flex flex-col items-center gap-1.5">
+            <h2 className="text-[#F47D31] text-2xl font-bold">
+              Our happy clients say about us
+            </h2>
+            <p className="text-[#52525B] text-[16px] leading-6">
+              2,157 people have said how good Mind blowing mornings
+            </p>
+          </div>
+          <div className="grid grid-cols-3 grid-flow-row gap-5 w-full relative z-20 py-8">
+            <TestimonialCard
+              testimonial="“I've never felt more energized and alive. This program has truly transformed my life”"
+              client="Sarah K"
+              proffesion="Journalist"
+            />
+            <TestimonialCard
+              testimonial="“The instructors are amazing, and the community support is invaluable. Highly recommend!”"
+              client="John D"
+              proffesion="Digital Marketer"
+            />
+            <TestimonialCard
+              testimonial="“I never thought I could do yoga, but this program made it accessible and enjoyable for me.”"
+              client="Lisa M"
+              proffesion="Graphic Designer"
+            />
+            <div className="h-full w-[50%] absolute inset-y-0 left-1/2 gradient1 -translate-x-1/2 opacity-30" />
+          </div>
+        </div>
+        <div className="flex items-center">
+          <Image
+            src="/assets/Rectangle 4.png"
+            alt=""
+            height={250}
+            width={250}
+          />
+          <Image
+            src="/assets/Rectangle 5.png"
+            alt=""
+            height={250}
+            width={250}
+          />
+          <Image src="/assets/Rectangle.png" alt="" height={300} width={300} />
+          <Image
+            src="/assets/Rectangle 2.png"
+            alt=""
+            height={250}
+            width={250}
+          />
+          <Image
+            src="/assets/Rectangle 3.png"
+            alt=""
+            height={250}
+            width={250}
+          />
+        </div>
+      </section>
+      <section className="flex flex-col items-center px-8 py-2">
+        <div className="flex flex-col items-center gap-1.5">
+          <h2 className="text-[#F47D31] text-2xl font-bold">
+            We&apos;re here for you!
           </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p className="text-[#52525B] text-[16px] leading-6">
+            Got a question or need some help?
           </p>
-        </a>
-      </div>
+        </div>
+
+        <div className="max-w-screen-lg min-h-[300px] w-full border-2 border-[#F47D31] rounded-md mt-8 relative flex flex-col items-center py-6">
+          {/* form */}
+          <div className="flex flex-col min-w-[65%] gap-5 mx-auto z-10">
+            <div className="flex items-center flex-1 justify-between gap-5">
+              <input
+                type="text"
+                placeholder="Name"
+                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-md shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 w-full"
+              />
+              <input
+                type="text"
+                placeholder="Location"
+                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-md shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 w-full"
+              />
+            </div>
+            <div className="flex items-center flex-1 justify-between gap-5">
+              <input
+                type="tel"
+                placeholder="Phone"
+                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-md shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 w-full"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-md shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 w-full"
+              />
+            </div>
+            <textarea
+              className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-md shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 w-full min-h-[100px] max-h-[100px]"
+              placeholder="Questions / Comments"
+            />
+            <button className="bg-[#F47D31] py-2.5 px-5 rounded-lg shadow-md uppercase z-10 text-white hover:bg-orange-400/90 transition-colors cursor-pointer min-w-[50%] mx-auto">
+              Submit
+            </button>
+          </div>
+          {/* decorations */}
+          <Image
+            src="/assets/Frame 122.png"
+            alt=""
+            height={118}
+            width={227}
+            className="absolute -top-[6.7rem] left-4"
+          />
+          <div className="p-8 bg-[#F47D31] rounded-full shadow-inner absolute bottom-8 left-8"></div>
+          <div className="p-7 bg-[#FFF6DA] rounded-full absolute bottom-40 left-80"></div>
+          <div className="p-6 bg-[#FFF6DA] rounded-full absolute top-40 left-60"></div>
+          <div className="p-8 bg-[#F47D31] rounded-full shadow-inner absolute bottom-20 right-40"></div>
+          <div className="p-7 bg-[#FFF6DA] rounded-full absolute bottom-60 left-60"></div>
+          <div className="p-6 bg-[#FFF6DA] rounded-full absolute bottom-40 right-10"></div>
+          <div className="p-10 bg-[#FFF6DA] rounded-full absolute top-8 right-32"></div>
+        </div>
+      </section>
+
+      <footer className="flex justify-between items-start px-16 py-2 my-16">
+        <div className="flex flex-col gap-5 max-w-xs">
+        <Image src="/assets/logo.png" alt="logo" height={75} width={100} objectFit='contain'/>
+        <p className="text-[#3C3C3C] text-lg font-medium">Clear your thoughts, Focus your mind, and Reduce stress!</p>
+        </div>
+        <div className="flex flex-col gap-2 items-start">
+          <h4 className="text-lg font-semibold text-[#3C3C3C]">Quick Links</h4>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
+             <li>Home</li>
+             <li>Community</li>
+             <li>Courses</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-2 items-start">
+          <h4 className="text-lg font-semibold text-[#3C3C3C]">Company</h4>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
+             <li>About Us</li>
+             <li>Contact Us</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-2 items-start">
+          <h4 className="text-lg font-semibold text-[#3C3C3C]">Further Information</h4>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
+             <li>Terms & Conditions</li>
+             <li>Privacy policy</li>
+             <li>Cookies Policy</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-2 items-start">
+          <h4 className="text-lg font-semibold text-[#3C3C3C]">Need Help?</h4>
+          <div className="flex items-center rounded-md shadow-md relative border-zinc-300">
+              <input
+                type="email"
+                placeholder="Your e-mail address"
+                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-tl-md rounded-bl-md outline-none border-none shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 max-w-[75%] flex-1"
+              />
+               <button className="bg-[#F47D31] rounded-tr-md rounded-br-md shadow-md uppercase z-10 text-white hover:bg-orange-400/90 transition-colors cursor-pointer absolute right-0 inset-y-0 mx-auto w-1/4 text-center">
+              Submit
+            </button>
+          </div>
+          <ul className="flex gap-5 items-center text-[#3C3C3C] text-[16px] leading-6 mt-4" >
+             <Instagram className="text-pink-600"/>
+             <Twitter className="text-blue-600"/>
+             <Facebook className="text-blue-800"/>
+          </ul>
+        </div>
+      </footer>
     </main>
   );
 }
