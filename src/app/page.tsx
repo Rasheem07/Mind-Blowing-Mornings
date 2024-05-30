@@ -1,5 +1,14 @@
 import TestimonialCard from "@/components/testimonialCard";
-import { Facebook, GroupIcon, Instagram, Smile, Star, Tv, Twitter, User2 } from "lucide-react";
+import {
+  Facebook,
+  GroupIcon,
+  Instagram,
+  Smile,
+  Star,
+  Tv,
+  Twitter,
+  User2,
+} from "lucide-react";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
 
@@ -11,10 +20,12 @@ export default function Home() {
         className="min-h-screen max-h-screen bg-fixed bg-cover bg-parallax relative shadow-inner flex flex-col items-center overlay background"
         style={{
           backgroundImage: "url('/assets/Background.png')",
+          backgroundRepeat: "none",
+          backgroundSize: "cover"
         }}
       >
         <div className="fixed inset-y-0 inset-x-0 overlay z-[-1]"></div>
-        <center className="header text-2xl flex flex-col items-center max-w-[60%] mt-32 text-[#FFFFFF]">
+        <center className="header text-2xl flex flex-col items-center w-full md:max-w-[60%] mt-24 md:mt-32 text-[#FFFFFF] font-sans">
           Transform your mind and body with our 21-day wellness program. Join
           our community and unlock your limitless potential today
         </center>
@@ -30,14 +41,14 @@ export default function Home() {
         />
       </section>
 
-      <section className="flex flex-col min-h-screen bg-white m-0 items-center w-full max-w-screen-xl mx-auto relative p-5">
-        <div>
-          <div className="flex items-center justify-between gap-5">
+      <section className="flex flex-col pb-8 bg-white m-0 items-center w-full mx-auto relative px-2.5 py-5 md:p-5">
+        <div className="md:max-w-screen-lg">
+          <div className="flex items-center justify-between md:gap-5 gap-2">
             <div>
-              <h2 className="text-3xl font-bold text-[#F47D31]">
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#F47D31]">
                 The Secret to mind blowing Mornings!
               </h2>
-              <p className="text-lg font-medium text-[#615F5F]">
+              <p className="text-sm md:text-lg font-medium text-[#615F5F]">
                 Start the day with engaging your body physically, mentally and
                 spiritually.
               </p>
@@ -47,20 +58,22 @@ export default function Home() {
               alt=""
               height={200}
               width={200}
+              className="h-[125px] w-[125px] md:h-[200px] md:w-[200px]"
             />
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 md:gap-5">
             <Image
               src="/assets/Ellipse 71.png"
               alt=""
               height={200}
               width={200}
+              className="h-[125px] w-[125px] md:h-[200px] md:w-[200px]"
             />
             <div>
-              <h2 className="text-3xl font-bold text-[#F47D31]">
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#F47D31]">
                 Warm-up your body within an hour!
               </h2>
-              <ul className="text-lg font-medium text-[#615F5F]">
+              <ul className="text-sm md:text-lg font-medium text-[#615F5F]">
                 <li>Dynamic warm ups</li>
                 <li>Spirited Yoga asanas</li>
                 <li>Effective physical exercises</li>
@@ -68,25 +81,26 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="flex items-center justify-between gap-5">
+          <div className="flex items-center justify-between gap-2 md:gap-5">
             <div>
-              <h2 className="text-3xl font-bold text-[#F47D31]">
-                The Secret to mind blowing Mornings!
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#F47D31]">
+                We are invested in your Success!
               </h2>
-              <p className="text-lg font-medium text-[#615F5F]">
-                Start the day with engaging your body physically, mentally and
-                spiritually.
+              <p className="text-sm md:text-lg text-[#615F5F]"> We prioritise your well-being
+                and promise to provide you with a healthy lifestyle and empower
+                you with a successful morning routine .
               </p>
             </div>
             <Image
-              src="/assets/Ellipse 72.png"
+              src="/assets/Ellipse 70.png"
               alt=""
               height={200}
               width={200}
+              className="h-[125px] w-[125px] md:h-[200px] md:w-[200px]"
             />
           </div>
         </div>
-        <div className="flex flex-col absolute top-0 -right-10 items-end gap-2">
+        <div className="hidden md:flex flex-col absolute top-0 right-0 items-end gap-2">
           <div className="py-2 px-[22px] bg-[#F47D31] text-white flex flex-col items-center font-semibold text-sm">
             <p className="rotate-90 tracking-tighter">C</p>
             <p className="rotate-90 tracking-tighter">o</p>
@@ -107,7 +121,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="min-h-screen bg-[#F47D31] flex justify-between px-10 py-7 transalte-3d">
+      <section className=" bg-[#F47D31] flex flex-col md:flex-row gap-5 md:gap-0 items-center md:items-start justify-between px-5 py-3.5 md:px-10 md:py-7 transalte-3d">
         <div className="max-w-[35%] min-w-[35%] flex flex-col items-center justify-center">
           <Image
             src="/assets/Ellipse 40.png"
@@ -118,7 +132,7 @@ export default function Home() {
             className=" object-contain opacity-95"
           />
         </div>
-        <div className="flex flex-col gap-8 max-w-[60%]">
+        <div className="flex flex-col gap-8 md:max-w-[60%]">
           <div className="space-y-3">
             <h2 className="text-2xl font-bold tracking-wide text-white">
               WHAT IS MINDBLOWING MORNINGS?
@@ -170,35 +184,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-screen px-8 py-2 transalte-3d">
-        <div className="flex items-center justify-between py-1 subpixel-antialiased divide-x-2 divide-[#F47D31] space-y-2">
+      <section className=" px-4 md:px-8 py-2 transalte-3d">
+        <div className="grid grid-cols-4 grid-flow-row py-1 subpixel-antialiased divide-x-2 divide-[#F47D31] ">
           <div className="flex flex-1 flex-col items-center gap-1 justify-center">
             <User2 className="text-[#F47D31]" />
-            <h4 className="text-lg font-semibold text-gray-900">
+            <h4 className="text-sm md:text-lg max-w-[50%] md:max-w-none mx-auto font-semibold text-gray-900">
               Qualified Instructors
             </h4>
             <strong>1+</strong>
           </div>
           <div className="flex flex-1 flex-col items-center gap-1 justify-center">
             <GroupIcon className="text-[#F47D31]" />
-            <h4 className="text-lg font-semibold text-gray-900">
-              Qualified Instructors
+            <h4 className="text-sm md:text-lg max-w-[50%] md:max-w-none mx-auto font-semibold text-gray-900">
+              Enrolled Members
             </h4>
-            <strong>1+</strong>
+            <strong>20+</strong>
           </div>
           <div className="flex flex-1 flex-col items-center gap-1 justify-center">
             <Tv className="text-[#F47D31]" />
-            <h4 className="text-lg font-semibold text-gray-900">
-              Qualified Instructors
+            <h4 className="text-sm md:text-lg max-w-[50%] md:max-w-none mx-auto font-semibold text-gray-900">
+              Sessions
             </h4>
-            <strong>1+</strong>
+            <strong>5+</strong>
           </div>
           <div className="flex flex-1 flex-col items-center gap-1 justify-center">
             <Smile className="text-[#F47D31]" />
-            <h4 className="text-lg font-semibold text-gray-900">
-              Qualified Instructors
+            <h4 className="text-sm md:text-lg max-w-[50%] md:max-w-none mx-auto font-semibold text-gray-900">
+              Happy Customers
             </h4>
-            <strong>1+</strong>
+            <strong>14+</strong>
           </div>
         </div>
 
@@ -207,11 +221,11 @@ export default function Home() {
             <h2 className="text-[#F47D31] text-2xl font-bold">
               Our instructors
             </h2>
-            <p className="text-[#52525B] text-[16px] leading-6">
+            <center className="text-[#52525B] text-[16px] leading-6">
               Experienced professionals in the field who can change your life!
-            </p>
+            </center>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-col md:flex-row items-center md:gap-5 pl-2 md:p-0">
             <Image
               src="/assets/Ellipse 22.png"
               alt=""
@@ -229,16 +243,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col mt-8 gap-5 px-8">
-          <div className="flex flex-col items-center gap-1.5">
-            <h2 className="text-[#F47D31] text-2xl font-bold">
+        <div className="flex flex-col mt-14 gap-5 px-8">
+          <div className="flex flex-col items-center w-full md:w-auto gap-1.5">
+            <h2 className="text-[#F47D31] md:text-2xl font-bold">
               Our happy clients say about us
             </h2>
-            <p className="text-[#52525B] text-[16px] leading-6">
+            <center className="text-[#52525B] text-[16px] leading-6">
               2,157 people have said how good Mind blowing mornings
-            </p>
+            </center>
           </div>
-          <div className="grid grid-cols-3 grid-flow-row gap-5 w-full relative z-20 py-8">
+          <div className="grid md:grid-cols-3 md:grid-flow-row gap-5 w-full relative z-20 md:py-8 md:px-0 px-4 py-4">
             <TestimonialCard
               testimonial="“I've never felt more energized and alive. This program has truly transformed my life”"
               client="Sarah K"
@@ -254,10 +268,10 @@ export default function Home() {
               client="Lisa M"
               proffesion="Graphic Designer"
             />
-            <div className="h-full w-[50%] absolute inset-y-0 left-1/2 gradient1 -translate-x-1/2 opacity-30" />
+            <div className="h-[50%] w-full md:h-full md:w-[50%] absolute inset-x-0 top-1/2 md:inset-y-0 md:left-1/2 gradient1 -translate-y-1/2 md:translate-y-0 md:-translate-x-1/2 opacity-30" />
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center">
           <Image
             src="/assets/Rectangle 4.png"
             alt=""
@@ -285,7 +299,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex flex-col items-center px-8 py-2">
+      <section className="flex flex-col items-center px-8 py-2 mt-8">
         <div className="flex flex-col items-center gap-1.5">
           <h2 className="text-[#F47D31] text-2xl font-bold">
             We&apos;re here for you!
@@ -295,9 +309,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-screen-lg min-h-[300px] w-full border-2 border-[#F47D31] rounded-md mt-8 relative flex flex-col items-center py-6">
+        <div className="max-w-screen-lg min-h-[300px] w-full border-2 border-[#F47D31] rounded-md mt-24 md:mt-8 relative flex flex-col items-center py-6">
           {/* form */}
-          <div className="flex flex-col min-w-[65%] gap-5 mx-auto z-10">
+          <div className="flex flex-col min-w-[65%] gap-5 mx-auto z-10 p-4 md:p-0">
             <div className="flex items-center flex-1 justify-between gap-5">
               <input
                 type="text"
@@ -338,60 +352,70 @@ export default function Home() {
             width={227}
             className="absolute -top-[6.7rem] left-4"
           />
-          <div className="p-8 bg-[#F47D31] rounded-full shadow-inner absolute bottom-8 left-8"></div>
+          <div className="p-8 bg-[#F47D31] rounded-full shadow-inner absolute bottom-24 md:bottom-8 left-8"></div>
           <div className="p-7 bg-[#FFF6DA] rounded-full absolute bottom-40 left-80"></div>
           <div className="p-6 bg-[#FFF6DA] rounded-full absolute top-40 left-60"></div>
-          <div className="p-8 bg-[#F47D31] rounded-full shadow-inner absolute bottom-20 right-40"></div>
+          <div className="p-8 bg-[#F47D31] md:block hidden rounded-full shadow-inner absolute bottom-20  right-40"></div>
           <div className="p-7 bg-[#FFF6DA] rounded-full absolute bottom-60 left-60"></div>
           <div className="p-6 bg-[#FFF6DA] rounded-full absolute bottom-40 right-10"></div>
           <div className="p-10 bg-[#FFF6DA] rounded-full absolute top-8 right-32"></div>
         </div>
       </section>
 
-      <footer className="flex justify-between items-start px-16 py-2 my-16">
-        <div className="flex flex-col gap-5 max-w-xs">
-        <Image src="/assets/logo.png" alt="logo" height={75} width={100} objectFit='contain'/>
-        <p className="text-[#3C3C3C] text-lg font-medium">Clear your thoughts, Focus your mind, and Reduce stress!</p>
+      <footer className="flex flex-col gap-6 md:gap-0 md:flex-row justify-between px-16 py-2 my-16">
+        <div className="flex flex-col gap-5 md:max-w-xs items-center">
+          <Image
+            src="/assets/logo.png"
+            alt="logo"
+            height={75}
+            width={100}
+            objectFit="contain"
+          />
+          <center className="text-[#3C3C3C] text-lg font-medium">
+            Clear your thoughts, Focus your mind, and Reduce stress!
+          </center>
         </div>
-        <div className="flex flex-col gap-2 items-start">
+        <div className="flex flex-col gap-2 md:items-start items-center">
           <h4 className="text-lg font-semibold text-[#3C3C3C]">Quick Links</h4>
-          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
-             <li>Home</li>
-             <li>Community</li>
-             <li>Courses</li>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1">
+            <li>Home</li>
+            <li>Community</li>
+            <li>Courses</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-2 items-start">
+        <div className="flex flex-col gap-2 md:items-start items-center">
           <h4 className="text-lg font-semibold text-[#3C3C3C]">Company</h4>
-          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
-             <li>About Us</li>
-             <li>Contact Us</li>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1">
+            <li>About Us</li>
+            <li>Contact Us</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-2 items-start">
-          <h4 className="text-lg font-semibold text-[#3C3C3C]">Further Information</h4>
-          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1" >
-             <li>Terms & Conditions</li>
-             <li>Privacy policy</li>
-             <li>Cookies Policy</li>
+        <div className="flex flex-col gap-2 md:items-start items-center">
+          <h4 className="text-lg font-semibold text-[#3C3C3C]">
+            Further Information
+          </h4>
+          <ul className="text-[#3C3C3C] text-[16px] leading-6 space-y-1">
+            <li>Terms & Conditions</li>
+            <li>Privacy policy</li>
+            <li>Cookies Policy</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-2 items-start">
+        <div className="flex flex-col gap-2 md:items-start items-center">
           <h4 className="text-lg font-semibold text-[#3C3C3C]">Need Help?</h4>
           <div className="flex items-center rounded-md shadow-md relative border-zinc-300">
-              <input
-                type="email"
-                placeholder="Your e-mail address"
-                className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-tl-md rounded-bl-md outline-none border-none shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 max-w-[75%] flex-1"
-              />
-               <button className="bg-[#F47D31] rounded-tr-md rounded-br-md shadow-md uppercase z-10 text-white hover:bg-orange-400/90 transition-colors cursor-pointer absolute right-0 inset-y-0 mx-auto w-1/4 text-center">
+            <input
+              type="email"
+              placeholder="Your e-mail address"
+              className="border-[#EEEEEE] border-[1.1px] bg-[#FBFBFB] rounded-tl-md rounded-bl-md outline-none border-none shadow-md placeholder:text-[#3C3C3C] text-[18px] leading-[26px] py-1 px-3 max-w-[75%] flex-1"
+            />
+            <button className="bg-[#F47D31] rounded-tr-md rounded-br-md shadow-md uppercase z-10 text-white hover:bg-orange-400/90 transition-colors cursor-pointer absolute right-0 inset-y-0 mx-auto w-1/4 text-center">
               Submit
             </button>
           </div>
-          <ul className="flex gap-5 items-center text-[#3C3C3C] text-[16px] leading-6 mt-4" >
-             <Instagram className="text-pink-600"/>
-             <Twitter className="text-blue-600"/>
-             <Facebook className="text-blue-800"/>
+          <ul className="flex gap-5 items-center text-[#3C3C3C] text-[16px] leading-6 mt-4">
+            <Instagram className="text-pink-600" />
+            <Twitter className="text-blue-600" />
+            <Facebook className="text-blue-800" />
           </ul>
         </div>
       </footer>
