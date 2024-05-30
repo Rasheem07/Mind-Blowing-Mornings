@@ -9,13 +9,18 @@ import {
   Twitter,
   User2,
 } from "lucide-react";
+import { NextSeo } from "next-seo";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
 
 const raleway = Raleway({ subsets: ["latin"], weight: "600" });
 export default function Home() {
   return (
-    <main className="scroll-snap">
+    <main className="subp">
+      <NextSeo 
+      title= "Mind Blowing Mornings"
+      description= "Make your mornings mind blowing"
+      />
       <section
         className="min-h-screen max-h-screen bg-fixed bg-cover bg-parallax relative shadow-inner flex flex-col items-center overlay background"
       >
