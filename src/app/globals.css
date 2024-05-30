@@ -17,16 +17,29 @@ body {
   perspective: 10px;
 }
 
+@media only screen and (min-width: 728px) {
+  .background {
+    transform: translateZ(-10px);
+  }
+}
 .header {
   transform-style: preserve-3d;
 }
 
 .background {
-  transform: translateZ(-10px);
+  background-image: url("/assets/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+
 .foreground {
-  transform: translate3d(-50%, 0, -10px);
+  transform: translateX(-50%);
+}
+
+.background,
+.foreground {
+ z-index: -1;
 }
 
 .translate-3d {
@@ -35,11 +48,13 @@ body {
   z-index: -1;
 }
 
-.background,
-.foreground {
-  z-index: -1;
-}
-
 .gradient1 {
-  background: linear-gradient(90deg, #44D8FF -0.55%, #084FFF -0.54%, #084FFF -0.53%, #FFCE00 49.19%, #F47D31 99.34%);
+  background: linear-gradient(
+    90deg,
+    #44d8ff -0.55%,
+    #084fff -0.54%,
+    #084fff -0.53%,
+    #ffce00 49.19%,
+    #f47d31 99.34%
+  );
 }

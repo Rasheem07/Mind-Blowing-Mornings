@@ -18,14 +18,9 @@ export default function Home() {
     <main className="scroll-snap">
       <section
         className="min-h-screen max-h-screen bg-fixed bg-cover bg-parallax relative shadow-inner flex flex-col items-center overlay background"
-        style={{
-          backgroundImage: "url('/assets/Background.png')",
-          backgroundRepeat: "none",
-          backgroundSize: "cover"
-        }}
       >
-        <div className="fixed inset-y-0 inset-x-0 overlay z-[-1]"></div>
-        <center className="header text-2xl flex flex-col items-center w-full md:max-w-[60%] mt-24 md:mt-32 text-[#FFFFFF] font-sans">
+        <div className="absolute inset-y-0 inset-x-0 overlay z-[-1]"></div>
+        <center className="header text-2xl flex flex-col items-center w-full max-w-[95%] md:max-w-[60%] mt-24 md:mt-32 text-[#FFFFFF] font-sans">
           Transform your mind and body with our 21-day wellness program. Join
           our community and unlock your limitless potential today
         </center>
@@ -41,9 +36,9 @@ export default function Home() {
         />
       </section>
 
-      <section className="flex flex-col pb-8 bg-white m-0 items-center w-full mx-auto relative px-2.5 py-5 md:p-5">
-        <div className="md:max-w-screen-lg">
-          <div className="flex items-center justify-between md:gap-5 gap-2">
+      <section className="flex flex-col pb-14 bg-white m-0 items-center w-full mx-auto relative px-2.5 py-5 md:p-5">
+        <div className="md:max-w-[65%] space-y-3">
+          <div className="flex items-center justify-between md:gap-5">
             <div>
               <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#F47D31]">
                 The Secret to mind blowing Mornings!
@@ -121,7 +116,7 @@ export default function Home() {
         />
       </section>
 
-      <section className=" bg-[#F47D31] flex flex-col md:flex-row gap-5 md:gap-0 items-center md:items-start justify-between px-5 py-3.5 md:px-10 md:py-7 transalte-3d">
+      <section className=" bg-[#F47D31] flex flex-col md:flex-row gap-5 md:gap-0 items-center md:items-start justify-between px-5 py-3.5 md:px-10 md:py-7 transalte-3d ">
         <div className="max-w-[35%] min-w-[35%] flex flex-col items-center justify-center">
           <Image
             src="/assets/Ellipse 40.png"
@@ -184,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" px-4 md:px-8 py-2 transalte-3d">
+      <section className=" px-1 md:px-8 py-2 transalte-3d bg-white">
         <div className="grid grid-cols-4 grid-flow-row py-1 subpixel-antialiased divide-x-2 divide-[#F47D31] ">
           <div className="flex flex-1 flex-col items-center gap-1 justify-center">
             <User2 className="text-[#F47D31]" />
@@ -225,7 +220,7 @@ export default function Home() {
               Experienced professionals in the field who can change your life!
             </center>
           </div>
-          <div className="flex flex-col md:flex-row items-center md:gap-5 pl-2 md:p-0">
+          <div className="flex flex-col md:flex-row items-center md:gap-5 px-2.5 md:p-0">
             <Image
               src="/assets/Ellipse 22.png"
               alt=""
@@ -243,30 +238,33 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col mt-14 gap-5 px-8">
+        <div className="flex flex-col mt-14 gap-5 px-3">
           <div className="flex flex-col items-center w-full md:w-auto gap-1.5">
-            <h2 className="text-[#F47D31] md:text-2xl font-bold">
+            <h2 className="text-[#F47D31] text-2xl font-bold">
               Our happy clients say about us
             </h2>
-            <center className="text-[#52525B] text-[16px] leading-6">
+            <p className="text-[#52525B] text-[16px] leading-6">
               2,157 people have said how good Mind blowing mornings
-            </center>
+            </p>
           </div>
           <div className="grid md:grid-cols-3 md:grid-flow-row gap-5 w-full relative z-20 md:py-8 md:px-0 px-4 py-4">
             <TestimonialCard
               testimonial="“I've never felt more energized and alive. This program has truly transformed my life”"
               client="Sarah K"
               proffesion="Journalist"
+              imgURL="/assets/Oval.png"
             />
             <TestimonialCard
               testimonial="“The instructors are amazing, and the community support is invaluable. Highly recommend!”"
               client="John D"
               proffesion="Digital Marketer"
+              imgURL="/assets/Oval 2.png"
             />
             <TestimonialCard
               testimonial="“I never thought I could do yoga, but this program made it accessible and enjoyable for me.”"
               client="Lisa M"
               proffesion="Graphic Designer"
+              imgURL="/assets/Oval 3.png"
             />
             <div className="h-[50%] w-full md:h-full md:w-[50%] absolute inset-x-0 top-1/2 md:inset-y-0 md:left-1/2 gradient1 -translate-y-1/2 md:translate-y-0 md:-translate-x-1/2 opacity-30" />
           </div>

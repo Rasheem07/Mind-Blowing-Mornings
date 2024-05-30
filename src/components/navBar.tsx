@@ -11,7 +11,7 @@ export default function NavBar() {
 
 
   return (
-    <div className='backdrop-blur-sm min-h-[70px] opacity-95 absolute top-0 inset-x-0 z-10 border-b border-zinc-200 max-w-[100vw] overflow-hidden' style={{background: "rgba(255, 255, 255, 0.7"}}>
+    <div className='backdrop-blur-sm min-h-[70px] opacity-95 absolute top-0 inset-x-0 z-10 border-b border-zinc-200 max-w-[100vw] overflow-hidden' style={{background: "rgba(255, 255, 255, 0.5"}}>
         <MaxWidthWrapper className='flex items-center justify-between'>
         <Image src="/assets/logo.png" alt="logo" height={75} width={100} objectFit='contain'/>
         <ul className='hidden md:flex items-center space-x-5 list-none text-gray-900'>
